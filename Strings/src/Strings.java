@@ -94,21 +94,39 @@ public class Strings {
 		// Print results
 		System.out.println("The last occurrence of the term \"Java\" is at index: " + array[counter - 1]);
 		System.out.println();
-			//4. How many sentences this string contains?
-		
-			int sentenceCount=0;
-			char check='.';
-			
-			for (int i=0;i<input.length();i++) {
-				
-				if (check==input.charAt(i)) {
-					sentenceCount++;
-				}
-				
+		// 4. How many sentences this string contains?
+
+		int sentenceCount = 0;
+		char check = '.';
+
+		for (int i = 0; i < input.length(); i++) {
+
+			if (check == input.charAt(i)) {
+				sentenceCount++;
 			}
-			
-			System.out.println("This string contains " + sentenceCount+ " sentences.");	
-			System.out.println();
+
+		}
+
+		System.out.println("This string contains " + sentenceCount + " sentences.");
+		System.out.println();
+
+		// 5. Does this string contains term "eclipse" (case Insensitive)?
+
+		// Iterate through array of words;
+		for (int i = 0; i < arr.length; i++) {
+
+			// Changing the words to all lower case characters will remove case sensitivity
+			// when searching
+			arr[i] = arr[i].toLowerCase();
+
+			// Since were looking to confirm that the term eclipse is present, locating it
+			// once is enough to end the iteration
+			if (arr[i].equals("eclipse")) {
+				System.out.println("This String does contain the term \"eclipse\".");
+				break;
+			}
+		}
+
 		//// EOF
 	}
 }
