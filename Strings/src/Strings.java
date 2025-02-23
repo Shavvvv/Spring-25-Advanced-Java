@@ -93,7 +93,22 @@ public class Strings {
 
 		// Print results
 		System.out.println("The last occurrence of the term \"Java\" is at index: " + array[counter - 1]);
-
+		System.out.println();
+			//4. How many sentences this string contains?
+		
+			int sentenceCount=0;
+			char check='.';
+			
+			for (int i=0;i<input.length();i++) {
+				
+				if (check==input.charAt(i)) {
+					sentenceCount++;
+				}
+				
+			}
+			
+			System.out.println("This string contains " + sentenceCount+ " sentences.");	
+			System.out.println();
 		//// EOF
 	}
 }
